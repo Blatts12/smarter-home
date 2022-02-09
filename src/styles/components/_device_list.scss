@@ -9,9 +9,7 @@
   flex-direction: column;
   gap: 0.5rem;
   overflow-y: scroll;
-
-  padding-inline: 0.5rem;
-  padding-block: 0 0.5rem;
+  scrollbar-width: thin;
 
   &--header {
     background-color: $uiBackground1;
@@ -19,20 +17,24 @@
     position: sticky;
     top: 0;
     left: 0;
+    right: 0;
+    z-index: 2;
 
-    padding-block: 0.5rem;
+    padding: 0.5rem;
   }
 }
 
 .dev-list-el {
   background-color: $uiBackground2;
   border-radius: 10px;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.5);
 
   display: grid;
   grid-template-areas: "name name" "con type";
   gap: 0.275rem;
 
   padding: 0.5rem;
+  margin-inline: 0.5rem;
 
   &--name {
     font-size: $font-l;
@@ -45,18 +47,22 @@
 
     grid-area: con;
     & > svg {
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
       width: 32px;
       height: 32px;
     }
 
     &__connected > svg {
-      color: green;
+      filter: drop-shadow(0 0 5px opacify($success, 0.5));
+      fill: $success;
     }
     &__disconnected > svg {
-      color: red;
+      filter: drop-shadow(0 0 5px opacify($error, 0.5));
+      fill: $error;
     }
     &__poorConnection > svg {
-      color: yellow;
+      filter: drop-shadow(0 0 5px opacify($warning, 0.5));
+      fill: $warning;
     }
   }
 
@@ -66,6 +72,8 @@
     grid-area: type;
 
     & > svg {
+      filter: drop-shadow(0 0 1px opacify($appFontColor, 0.25));
+      fill: $appFontColor;
       width: 32px;
       height: 32px;
     }

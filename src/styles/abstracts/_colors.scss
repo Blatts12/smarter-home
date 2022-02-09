@@ -1,5 +1,11 @@
-$appBackground: #210b2c;
-$appFontColor: #fef7ff;
-$uiBackground1: #51206d;
-$uiBackground2: #663683;
-$uiBackground3: #764495;
+$basecolor: hsl(210, 14%, 0%);
+
+$appBackground: lighten($basecolor, 14);
+$appFontColor: lighten($basecolor, 95);
+$uiBackground1: lighten($basecolor, 22);
+$uiBackground2: lighten($basecolor, 28);
+$uiBackground3: lighten($basecolor, 38);
+
+$success: hsl(116, 46%, 49%);
+$warning: hsl(41, 100%, 55%);
+$error: hsl(0, 100%, 60%);
