@@ -1,0 +1,13 @@
+@import "../abstracts/colors";
+
+#root {
+  background-color: $appBackground;
+  color: $appFontColor;
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas: "nav nav" "list app";
+  grid-template-columns: max-content auto;
+  grid-template-rows: 60px auto;
+}

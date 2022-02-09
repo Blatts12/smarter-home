@@ -1,0 +1,55 @@
+@import "../abstracts/colors";
+@import "../abstracts/typo";
+
+.device-list {
+  background-color: $uiBackground1;
+
+  grid-area: list;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  overflow-y: scroll;
+
+  padding-inline: 0.5rem;
+  padding-block: 0 0.5rem;
+
+  &--header {
+    background-color: $uiBackground1;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    padding-block: 0.5rem;
+  }
+}
+
+.device-list-element {
+  background-color: $uiBackground2;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-areas: "name name" "connection type";
+  gap: 0.275rem;
+
+  padding: 0.5rem;
+
+  &--name {
+    font-size: $font-l;
+
+    grid-area: name;
+  }
+
+  &--connection {
+    text-align: left;
+
+    grid-area: connection;
+  }
+
+  &--type {
+    text-align: right;
+
+    grid-area: type;
+  }
+}

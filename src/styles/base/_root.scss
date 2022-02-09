@@ -1,6 +1,9 @@
 @import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
+@import "../abstracts/colors";
 
 html,
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: $appBackground;
+  color: $appFontColor;
 }
