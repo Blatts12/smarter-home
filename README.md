@@ -7,7 +7,7 @@ npm install
 ```
 
 ### Mock Rest API
-Powered by JSON Server
+Powered by JSON Server \
 Port 3030
 ```
 npm run db
