@@ -1,0 +1,52 @@
+{
+  "devices": [
+    {
+      "id": 1,
+      "type": "bulb",
+      "name": "SuperBulb 1",
+      "connectionState": "connected",
+      "isTurnedOn": false,
+      "brightness": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "id": 2,
+      "type": "outlet",
+      "name": "SuperOutlet 1",
+      "connectionState": "disconnected",
+      "isTurnedOn": false,
+      "powerConsumption": 0
+    },
+    {
+      "id": 3,
+      "type": "temperatureSensor",
+      "name": "SuperSensor 1",
+      "connectionState": "poorConnection",
+      "temperature": 24.5
+    },
+    {
+      "id": 4,
+      "type": "bulb",
+      "name": "SuperBulb 2",
+      "connectionState": "connected",
+      "isTurnedOn": true,
+      "brightness": 50,
+      "color": "#FF44CC"
+    },
+    {
+      "id": 5,
+      "type": "outlet",
+      "name": "SuperOutlet 2",
+      "connectionState": "connected",
+      "isTurnedOn": true,
+      "powerConsumption": 20
+    },
+    {
+      "id": 6,
+      "type": "temperatureSensor",
+      "name": "SuperSensor 2",
+      "connectionState": "connected",
+      "temperature": 24.5
+    }
+  ]
+}
