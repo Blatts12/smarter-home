@@ -1,7 +1,26 @@
 import React from "react";
+import { useQuery } from "react-query";
+import { SmartDevice } from "../../models/SmartDevice";
+import DeviceListElement from "./DeviceListElement";
+
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const DeviceList: React.FC = () => {
-  return <div></div>;
+  const { isLoading, data, error } = useQuery<SmartDevice[]>("devices", () =>
+    fetch(`${apiUrl}/devices`).then((res) => res.json())
+  );
+
+  if (isLoading) return <>Loading...</>;
+
+  if (error) return <>{`An error has occurred: ${(error as any).message}`}</>;
+
+  return (
+    <div>
+      {data?.map((device) => (
+        <DeviceListElement key={device.id} device={device} />
+      ))}
+    </div>
+  );
 };
 
 export default DeviceList;
