@@ -1,0 +1,43 @@
+@import "../abstracts/colors";
+@import "../abstracts/typo";
+
+.navbar {
+  background-color: $uiBackground1;
+
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-inline: 4rem;
+
+  &--logo {
+    inline-size: 46px;
+  }
+
+  &--settings {
+    border: none;
+    border-radius: 50%;
+    background-color: $uiBackground2;
+    color: $appFontColor;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+
+    padding: 0.5em;
+
+    & svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: $uiBackground3;
+    }
+  }
+}

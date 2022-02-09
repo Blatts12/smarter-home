@@ -1,14 +1,13 @@
 @import "../abstracts/colors";
 @import "../abstracts/typo";
 
-.device-list {
+.dev-list {
   background-color: $uiBackground1;
 
   grid-area: list;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-
   overflow-y: scroll;
 
   padding-inline: 0.5rem;
@@ -25,12 +24,12 @@
   }
 }
 
-.device-list-element {
+.dev-list-el {
   background-color: $uiBackground2;
   border-radius: 10px;
 
   display: grid;
-  grid-template-areas: "name name" "connection type";
+  grid-template-areas: "name name" "con type";
   gap: 0.275rem;
 
   padding: 0.5rem;
@@ -41,15 +40,34 @@
     grid-area: name;
   }
 
-  &--connection {
+  &--con {
     text-align: left;
 
-    grid-area: connection;
+    grid-area: con;
+    & > svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__connected > svg {
+      color: green;
+    }
+    &__disconnected > svg {
+      color: red;
+    }
+    &__poorConnection > svg {
+      color: yellow;
+    }
   }
 
   &--type {
     text-align: right;
 
     grid-area: type;
+
+    & > svg {
+      width: 32px;
+      height: 32px;
+    }
   }
 }

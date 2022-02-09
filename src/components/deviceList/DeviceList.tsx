@@ -15,8 +15,8 @@ const DeviceList: React.FC = () => {
   if (error) return <>{`An error has occurred: ${(error as any).message}`}</>;
 
   return (
-    <div className="device-list">
-      <h2 className="device-list--header">Your Devices</h2>
+    <div className="dev-list">
+      <h2 className="dev-list--header">Your Devices</h2>
       {data?.map((device) => (
         <DeviceListElement key={device.id} device={device} />
       ))}
