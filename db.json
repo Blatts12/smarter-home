@@ -3,7 +3,7 @@
     {
       "id": 1,
       "type": "bulb",
-      "name": "SuperBulb 1",
+      "name": "SuperBulb Mega Super Ultra Top 1 in the World",
       "connectionState": "connected",
       "isTurnedOn": false,
       "brightness": 0,
@@ -51,7 +51,7 @@
     {
       "id": 7,
       "type": "bulb",
-      "name": "SuperBulb 1",
+      "name": "SuperBulb 3",
       "connectionState": "connected",
       "isTurnedOn": false,
       "brightness": 0,
@@ -60,7 +60,7 @@
     {
       "id": 8,
       "type": "outlet",
-      "name": "SuperOutlet 1",
+      "name": "SuperOutlet 3",
       "connectionState": "disconnected",
       "isTurnedOn": false,
       "powerConsumption": 0
@@ -68,14 +68,14 @@
     {
       "id": 9,
       "type": "temperatureSensor",
-      "name": "SuperSensor 1",
+      "name": "SuperSensor 3",
       "connectionState": "poorConnection",
       "temperature": 24.5
     },
     {
       "id": 10,
       "type": "bulb",
-      "name": "SuperBulb 2",
+      "name": "SuperBulb 4",
       "connectionState": "connected",
       "isTurnedOn": true,
       "brightness": 50,
@@ -84,7 +84,7 @@
     {
       "id": 11,
       "type": "outlet",
-      "name": "SuperOutlet 2",
+      "name": "SuperOutlet 4",
       "connectionState": "connected",
       "isTurnedOn": true,
       "powerConsumption": 20
@@ -92,7 +92,7 @@
     {
       "id": 12,
       "type": "temperatureSensor",
-      "name": "SuperSensor 2",
+      "name": "SuperSensor 4",
       "connectionState": "connected",
       "temperature": 24.5
     }

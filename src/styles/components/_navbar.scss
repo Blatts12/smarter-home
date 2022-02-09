@@ -1,5 +1,6 @@
 @import "../abstracts/colors";
 @import "../abstracts/typo";
+@import "../abstracts/brakepoints";
 
 .navbar {
   background-color: $uiBackground1;
@@ -41,5 +42,13 @@
       cursor: pointer;
       background-color: $uiBackground3;
     }
+  }
+
+  @media screen and (max-width: $bp_tablet) {
+    padding-inline: 2rem;
+  }
+
+  @media screen and (max-width: $bp_phone) {
+    padding-inline: 0.65rem;
   }
 }

@@ -4,13 +4,25 @@ import { connectionIcons, deviceIcons } from "./ListIcons";
 
 interface DeviceListElementProps {
   device: SmartDevice;
+  isSelected: boolean;
+  setDevice: (id: string) => void;
 }
 
-const DeviceListElement: React.FC<DeviceListElementProps> = ({ device }) => {
+const DeviceListElement: React.FC<DeviceListElementProps> = ({
+  device,
+  isSelected,
+  setDevice,
+}) => {
   const connectionClass = `dev-list-el--con__${device.connectionState}`;
+  const selectedClass = isSelected ? "dev-list-el__selected" : "";
 
   return (
-    <div className="dev-list-el">
+    <div
+      className={`dev-list-el ${selectedClass}`}
+      onClick={() => setDevice(device.id)}
+      onKeyPress={() => setDevice(device.id)}
+      tabIndex={0}
+    >
       <p className="dev-list-el--name">{device.name}</p>
       <p className={`dev-list-el--con ${connectionClass}`}>
         {connectionIcons[device.connectionState]}

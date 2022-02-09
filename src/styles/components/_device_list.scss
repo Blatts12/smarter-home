@@ -1,27 +1,35 @@
 @import "../abstracts/colors";
 @import "../abstracts/typo";
+@import "../abstracts/brakepoints";
 
-.dev-list {
+.dev {
   background-color: $uiBackground1;
-
   grid-area: list;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  overflow-y: scroll;
-  scrollbar-width: thin;
+  max-width: 360px;
+  overflow-y: hidden;
 
-  &--header {
-    background-color: $uiBackground1;
-
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-
-    padding: 0.5rem;
+  @media screen and (max-width: $bp_tablet) {
+    max-width: 240px;
   }
+
+  @media screen and (max-width: $bp_phone) {
+    max-width: 200px;
+  }
+}
+
+.dev--header {
+  padding-left: 0.5rem;
+}
+
+.dev--list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  scrollbar-width: thin;
+  overflow-y: auto;
 }
 
 .dev-list-el {
@@ -36,8 +44,16 @@
   padding: 0.5rem;
   margin-inline: 0.5rem;
 
+  &__selected {
+    outline: 2px solid $uiBackground3;
+    box-shadow: inset 0px 0px 6px opacify($uiBackground3, 0.9);
+  }
+
   &--name {
     font-size: $font-l;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 
     grid-area: name;
   }
