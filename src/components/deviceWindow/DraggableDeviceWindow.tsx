@@ -1,9 +1,10 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { SmartDeviceDetails } from "../../models/SmartDeviceDetails";
+import fetchDeviceDetails from "../../queries/fetchDeviceDetails";
+import { useUiStore } from "../../store/uiStore";
+import DraggableWindow from "../common/DraggableWindow";
 import Loading from "../common/Loading";
-
-const apiUrl = import.meta.env.VITE_API_URL;
 
 interface DraggableDeviceWindowProps {
   selectedDevice: string;
@@ -12,17 +13,19 @@ interface DraggableDeviceWindowProps {
 const DraggableDeviceWindow: React.FC<DraggableDeviceWindowProps> = ({
   selectedDevice,
 }) => {
+  const closeWindow = useUiStore((state) => state.closeWindow);
   const { isLoading, data, error } = useQuery<SmartDeviceDetails>(
-    `device_${selectedDevice}`,
-    () =>
-      fetch(`${apiUrl}/devices/${selectedDevice}`).then((res) => res.json()),
-    { refetchInterval: 10000 }
+    ["device", selectedDevice],
+    async () => fetchDeviceDetails.action(selectedDevice),
+    fetchDeviceDetails.options
   );
 
   return (
-    <div>
-      <p>Draggable</p>
-      {isLoading ? <Loading /> : <>{data?.type}</>}
+    <div className="drag-device-area">
+      <DraggableWindow id="device-window">
+        <button onClick={closeWindow}>Close</button>
+        {isLoading ? <Loading /> : <>{data?.type}</>}
+      </DraggableWindow>
     </div>
   );
 };

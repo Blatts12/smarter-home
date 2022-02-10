@@ -10,10 +10,10 @@ const DeviceWindow: React.FC = () => {
 
   if (!selectedDevice || !showWindow) return null;
 
-  //   if (isCompact && showWindow)
-  return <FullDeviceWindow selectedDevice={selectedDevice} />;
+  if (isCompact && showWindow)
+    return <FullDeviceWindow selectedDevice={selectedDevice} />;
 
-  //   return <DraggableDeviceWindow selectedDevice={selectedDevice} />;
+  return <DraggableDeviceWindow selectedDevice={selectedDevice} />;
 };
 
 export default DeviceWindow;

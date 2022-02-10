@@ -1,0 +1,13 @@
+@import "../abstracts/colors";
+
+.drag-device-area {
+  grid-area: app;
+}
+
+#device-window {
+  background-color: $uiBackground2;
+  border: 1px solid $uiBackground3;
+  border-radius: 10px;
+
+  padding: 0.5rem;
+}
