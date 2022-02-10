@@ -26,10 +26,10 @@ const FullDeviceWindow: React.FC<FullDeviceWindowProps> = ({
   return (
     <div className="full-window">
       <div className="full-window--nav">
-        <button className="full-window--button full-window--edit">
+        <button className="button button__icon">
           <HiPencil />
         </button>
-        <button className="full-window--button" onClick={closeWindow}>
+        <button className="button button__icon" onClick={closeWindow}>
           <BsX />
         </button>
       </div>

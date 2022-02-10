@@ -73,10 +73,12 @@
       filter: drop-shadow(0 0 5px opacify($success, 0.5));
       fill: $success;
     }
+
     &__disconnected > svg {
       filter: drop-shadow(0 0 5px opacify($error, 0.5));
       fill: $error;
     }
+
     &__poorConnection > svg {
       filter: drop-shadow(0 0 5px opacify($warning, 0.5));
       fill: $warning;

@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   return (
     <header className="navbar">
       <img className="navbar--logo" src="src/logo.png" alt="Logo" />
-      <button className="navbar--settings">
+      <button className="button button__icon">
         <BsGearFill />
       </button>
     </header>

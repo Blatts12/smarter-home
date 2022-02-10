@@ -23,30 +23,9 @@
     height: 256px;
   }
 
-  &--button {
-    border: none;
-    border-radius: 50%;
-    background-color: $uiBackground2;
-    color: $appFontColor;
-    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.5);
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    width: fit-content;
-    padding: 0.5em;
-
-    & svg {
-      width: 32px;
-      height: 32px;
-    }
-
-    &:hover,
-    &:focus {
-      cursor: pointer;
-      background-color: $uiBackground3;
-    }
+  & .button__icon > svg {
+    width: 32px;
+    height: 32px;
   }
 
   &--nav {
