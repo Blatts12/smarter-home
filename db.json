@@ -4,7 +4,7 @@
       "id": 1,
       "type": "bulb",
       "name": "SuperBulb Mega Super Ultra Top 1 in the World",
-      "connectionState": "connected",
+      "connectionState": "poorConnection",
       "isTurnedOn": false,
       "brightness": 0,
       "color": "#ABC123"
