@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import DeviceList from "./components/deviceList/DeviceList";
+import DeviceWindow from "./components/deviceWindow/DeviceWindow";
 import Navbar from "./components/navigation/Navbar";
 import { useUiStore } from "./store/uiStore";
 
@@ -25,6 +26,7 @@ const App: React.FC = () => {
     <QueryClientProvider client={queryClient}>
       <Navbar />
       <DeviceList />
+      <DeviceWindow />
     </QueryClientProvider>
   );
 };

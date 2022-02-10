@@ -7,7 +7,7 @@
       "connectionState": "connected",
       "isTurnedOn": false,
       "brightness": 0,
-      "color": "#FFFFFF"
+      "color": "#ABC123"
     },
     {
       "id": 2,
@@ -55,7 +55,7 @@
       "connectionState": "connected",
       "isTurnedOn": false,
       "brightness": 0,
-      "color": "#FFFFFF"
+      "color": "#000000"
     },
     {
       "id": 8,

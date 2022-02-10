@@ -4,6 +4,7 @@
 
 .navbar {
   background-color: $uiBackground1;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.33);
 
   grid-area: nav;
   display: flex;

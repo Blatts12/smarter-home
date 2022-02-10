@@ -1,0 +1,84 @@
+@import "../abstracts/typo";
+@import "../abstracts/colors";
+
+.full-window {
+  grid-area: app;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 0.5rem;
+
+  & > svg {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+
+    width: 256px;
+    height: 256px;
+  }
+
+  &--button {
+    border: none;
+    border-radius: 50%;
+    background-color: $uiBackground2;
+    color: $appFontColor;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.5);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    padding: 0.5em;
+
+    & svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: $uiBackground3;
+    }
+  }
+
+  &--nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.device-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.45);
+
+  & > h2 {
+    width: 100%;
+    text-align: center;
+    font-size: $font-3xl;
+  }
+
+  &--item {
+    flex: 1 0 49%;
+    text-align: center;
+
+    &--title {
+      font-size: $font-xl;
+    }
+
+    &--value {
+      font-size: $font-l;
+    }
+  }
+}

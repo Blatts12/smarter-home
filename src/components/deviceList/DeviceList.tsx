@@ -1,22 +1,16 @@
 import React, { useCallback, useState } from "react";
 import { useQuery } from "react-query";
 import { SmartDevice } from "../../models/SmartDevice";
+import { useUiStore } from "../../store/uiStore";
 import Loading from "../common/Loading";
 import DeviceListElement from "./DeviceListElement";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
 const DeviceList: React.FC = () => {
-  const [selectedDevice, setSelectedDevice] = useState<string | null>();
+  const selectedDevice = useUiStore((state) => state.selectedDevice);
   const { isLoading, data, error } = useQuery<SmartDevice[]>("devices", () =>
     fetch(`${apiUrl}/devices`).then((res) => res.json())
-  );
-
-  const setDevice = useCallback(
-    (id: string) => {
-      setSelectedDevice(id);
-    },
-    [setSelectedDevice]
   );
 
   return (
@@ -31,7 +25,6 @@ const DeviceList: React.FC = () => {
             <DeviceListElement
               key={`${device.id}-device`}
               device={device}
-              setDevice={setDevice}
               isSelected={selectedDevice === device.id}
             />
           ))
