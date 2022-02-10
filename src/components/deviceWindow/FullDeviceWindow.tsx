@@ -3,7 +3,7 @@ import { BsX } from "react-icons/bs";
 import { HiPencil } from "react-icons/hi";
 import { useQuery } from "react-query";
 import { SmartDeviceDetails } from "../../models/SmartDeviceDetails";
-import fetchDeviceDetails from "../../queries/fetchDeviceDetails";
+import FetchDeviceDetails from "../../queries/FetchDeviceDetails";
 import { useUiStore } from "../../store/uiStore";
 import { deviceIcons } from "../common/DeviceIcons";
 import Loading from "../common/Loading";
@@ -19,8 +19,8 @@ const FullDeviceWindow: React.FC<FullDeviceWindowProps> = ({
   const closeWindow = useUiStore((state) => state.closeWindow);
   const { isLoading, data, error } = useQuery<SmartDeviceDetails>(
     ["device", selectedDevice],
-    async () => fetchDeviceDetails.action(selectedDevice),
-    fetchDeviceDetails.options
+    async () => FetchDeviceDetails.action(selectedDevice),
+    FetchDeviceDetails.options
   );
 
   return (
