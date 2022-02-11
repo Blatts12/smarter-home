@@ -10,11 +10,11 @@ import { deviceIcons } from "../common/DeviceIcons";
 import Loading from "../common/Loading";
 import DeviceInfo from "./DeviceInfo";
 
-interface FullDeviceWindowProps {
+interface CompactDeviceWindowProps {
   selectedDevice: string;
 }
 
-const FullDeviceWindow: React.FC<FullDeviceWindowProps> = ({
+const CompactDeviceWindow: React.FC<CompactDeviceWindowProps> = ({
   selectedDevice,
 }) => {
   const queryClient = useQueryClient();
@@ -26,13 +26,10 @@ const FullDeviceWindow: React.FC<FullDeviceWindowProps> = ({
   );
 
   useEffect(() => {
-    console.log("new");
     if (data) {
-      console.log("new in 1");
       const state = queryClient.getQueryState<SmartDevice[]>("devices");
       const oldState = state?.data;
       if (oldState) {
-        console.log("new in 2");
         const deviceIndex = oldState.findIndex((dev) => dev.id === data.id);
         oldState[deviceIndex] = data;
         queryClient.setQueryData("devices", oldState);
@@ -80,4 +77,4 @@ const FullDeviceWindow: React.FC<FullDeviceWindowProps> = ({
   );
 };
 
-export default FullDeviceWindow;
+export default CompactDeviceWindow;

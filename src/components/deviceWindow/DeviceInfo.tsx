@@ -69,4 +69,4 @@ const DeviceInfo: React.FC<DeviceInfoProps> = ({ deviceDetails }) => {
   }
 };
 
-export default DeviceInfo;
+export default React.memo(DeviceInfo);

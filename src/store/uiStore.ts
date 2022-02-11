@@ -1,4 +1,5 @@
 import createStore from "zustand";
+import { getIsCompact } from "../utils/getIsCompact";
 
 interface WindowSettings {
   x: number;
@@ -10,6 +11,10 @@ interface WindowSettings {
 interface UiState {
   isCompact: boolean;
   setIsCompact: (value: boolean) => void;
+
+  showCompactList: boolean;
+  openCompactList: () => void;
+  closeCompactList: () => void;
 
   selectedDevice: string | null;
   setSelectedDevice: (id: string) => void;
@@ -23,8 +28,12 @@ interface UiState {
 }
 
 export const useUiStore = createStore<UiState>((set, get) => ({
-  isCompact: window.innerWidth <= 600,
+  isCompact: getIsCompact(),
   setIsCompact: (value) => set({ isCompact: value }),
+
+  showCompactList: false,
+  openCompactList: () => set({ showCompactList: true }),
+  closeCompactList: () => set({ showCompactList: false }),
 
   selectedDevice: null,
   setSelectedDevice: (id) => set({ selectedDevice: id, showWindow: true }),

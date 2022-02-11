@@ -4,8 +4,7 @@ import DeviceList from "./components/deviceList/DeviceList";
 import DeviceWindow from "./components/deviceWindow/DeviceWindow";
 import Navbar from "./components/navigation/Navbar";
 import { useUiStore } from "./store/uiStore";
-
-const getIsCompact = () => window.innerWidth <= 600;
+import { getIsCompact } from "./utils/getIsCompact";
 const queryClient = new QueryClient();
 
 const App: React.FC = () => {
@@ -20,7 +19,7 @@ const App: React.FC = () => {
     return () => {
       window.removeEventListener("resize", onResize);
     };
-  }, [setIsCompact]);
+  }, [setIsCompact, getIsCompact]);
 
   return (
     <QueryClientProvider client={queryClient}>

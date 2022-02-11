@@ -1,37 +1,5 @@
 @import "../abstracts/colors";
 @import "../abstracts/typo";
-@import "../abstracts/brakepoints";
-
-.dev {
-  background-color: $uiBackground1;
-  grid-area: list;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  max-width: 360px;
-  overflow-y: hidden;
-
-  @media screen and (max-width: $bp_tablet) {
-    max-width: 240px;
-  }
-
-  @media screen and (max-width: $bp_phone) {
-    max-width: 200px;
-  }
-}
-
-.dev--header {
-  padding-left: 0.5rem;
-}
-
-.dev--list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  scrollbar-width: thin;
-  overflow-y: auto;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.5);
-}
 
 .dev-list-el {
   background-color: $uiBackground2;

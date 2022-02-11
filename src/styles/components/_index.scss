@@ -1,6 +1,8 @@
 @use "./app";
 @use "./button";
-@use "./device_list";
+@use "./side_device_list";
+@use "./compact_device_list";
+@use "./device_list_element";
 @use "./navbar";
 @use "./loading";
 @use "./full_device";

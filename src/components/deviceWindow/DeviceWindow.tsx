@@ -1,7 +1,7 @@
 import React from "react";
 import { useUiStore } from "../../store/uiStore";
 import DraggableDeviceWindow from "./DraggableDeviceWindow";
-import FullDeviceWindow from "./FullDeviceWindow";
+import CompactDeviceWindow from "./CompactDeviceWindow";
 
 const DeviceWindow: React.FC = () => {
   const isCompact = useUiStore((state) => state.isCompact);
@@ -11,7 +11,7 @@ const DeviceWindow: React.FC = () => {
   if (!selectedDevice || !showWindow) return null;
 
   if (isCompact && showWindow)
-    return <FullDeviceWindow selectedDevice={selectedDevice} />;
+    return <CompactDeviceWindow selectedDevice={selectedDevice} />;
 
   return <DraggableDeviceWindow selectedDevice={selectedDevice} />;
 };
