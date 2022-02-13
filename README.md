@@ -16,7 +16,7 @@ npm run db
 
 
 ### Start app
-Powered by Vite
+Powered by Vite. \
 Port 3000.
 ```
 npm run dev
