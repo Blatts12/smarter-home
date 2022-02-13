@@ -11,10 +11,9 @@
   grid-template-areas: "nav nav" "list app";
   grid-template-columns: max-content auto;
   grid-template-rows: 70px auto;
-  z-index: 0;
 
   @media screen and (max-width: $bp_phone) {
     grid-template-areas: "nav nav" "app app";
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 0;
   }
 }

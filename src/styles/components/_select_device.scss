@@ -1,0 +1,22 @@
+@import "../abstracts/typo";
+
+.select-device {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 2rem;
+
+  & > p {
+    font-size: $font-3xl;
+  }
+
+  & > svg {
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+  }
+}

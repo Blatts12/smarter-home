@@ -13,7 +13,7 @@
 }
 
 .com-dev {
-  background-color: adjust-color($uiBackground1, $alpha: -0.125);
+  background-color: $uiBackground1;
   color: $appFontColor;
 
   position: absolute;

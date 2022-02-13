@@ -7,7 +7,7 @@ import { useUiStore } from "../../store/uiStore";
 import Loading from "../common/Loading";
 import DeviceListElement from "./DeviceListElement";
 
-const CompactList: React.FC = () => {
+const CompactDeviceList: React.FC = () => {
   const selectedDevice = useUiStore((state) => state.selectedDevice);
   const showCompactList = useUiStore((state) => state.showCompactList);
   const closeCompactList = useUiStore((state) => state.closeCompactList);
@@ -60,4 +60,4 @@ const CompactList: React.FC = () => {
   );
 };
 
-export default CompactList;
+export default CompactDeviceList;

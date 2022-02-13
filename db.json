@@ -3,7 +3,7 @@
     {
       "id": 1,
       "type": "bulb",
-      "name": "SuperBulb Mega Super Ultra Top 1 in the World",
+      "name": "SuperBulb 1",
       "connectionState": "poorConnection",
       "isTurnedOn": false,
       "brightness": 0,

@@ -1,1 +1,1 @@
-export const getIsCompact = () => window.innerWidth <= 600;
+export const getIsCompact = () => window.innerWidth <= 670;

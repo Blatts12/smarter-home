@@ -1,0 +1,54 @@
+@import "../abstracts/typo";
+@import "../abstracts/brakepoints";
+@import "../abstracts/colors";
+
+.dev-info {
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.45);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  & > h2 {
+    text-align: left;
+    font-size: $font-xxl;
+    width: 100%;
+  }
+
+  &--item {
+    border-left: 1px solid hsla(0, 0%, 100%, 0.5);
+    text-align: left;
+    padding-left: 0.5rem;
+    flex: 1 0 34%;
+
+    &--title {
+      font-size: $font-xl;
+    }
+
+    &--value {
+      font-size: $font-l;
+    }
+  }
+
+  @media screen and (max-width: $bp-tablet) {
+    & > h2 {
+      font-size: $font-xl;
+    }
+
+    &--item {
+      &--title {
+        font-size: $font-l;
+      }
+
+      &--value {
+        font-size: $font-m;
+      }
+    }
+  }
+
+  @media screen and (max-width: calc($bp-phone - 200px)) {
+    &--item {
+      flex: 1 0 51%;
+    }
+  }
+}

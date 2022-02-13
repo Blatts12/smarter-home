@@ -45,8 +45,8 @@ export const useUiStore = createStore<UiState>((set, get) => ({
   settingsWindow: {
     x: 0,
     y: 0,
-    width: 500,
-    height: 400,
+    width: 420,
+    height: 420,
   },
   setSettings: (settings) => set({ settingsWindow: settings }),
 }));

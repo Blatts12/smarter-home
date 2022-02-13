@@ -1,7 +1,7 @@
 import React from "react";
 import { useUiStore } from "../../store/uiStore";
 import Portal from "../common/Portal";
-import CompactList from "./CompactList";
+import CompactDeviceList from "./CompactDeviceList";
 import SideDeviceList from "./SideDeviceList";
 
 const DeviceList: React.FC = () => {
@@ -10,7 +10,7 @@ const DeviceList: React.FC = () => {
   if (isCompact)
     return (
       <Portal mountId="com-dev-portal">
-        <CompactList />
+        <CompactDeviceList />
       </Portal>
     );
 

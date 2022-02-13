@@ -73,9 +73,10 @@ const DraggableWindow: React.FC<DraggableWindow> = ({ children, id }) => {
             outer: "parent",
           }),
           interact.modifiers.restrictSize({
+            max: "parent",
             min: {
-              width: 400,
-              height: 300,
+              width: 420,
+              height: 340,
             },
           }),
         ],
@@ -93,9 +94,11 @@ const DraggableWindow: React.FC<DraggableWindow> = ({ children, id }) => {
       });
 
     return () => {
-      interactable.unset();
+      if (draggable.current) {
+        interactable.unset();
+      }
     };
-  }, [draggable]);
+  }, [draggable, id]);
 
   return (
     <div

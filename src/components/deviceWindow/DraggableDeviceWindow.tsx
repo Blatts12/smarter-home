@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
+import { BsX } from "react-icons/bs";
 import { useQuery, useQueryClient } from "react-query";
 import { SmartDevice } from "../../models/SmartDevice";
 import { SmartDeviceDetails } from "../../models/SmartDeviceDetails";
 import FetchDeviceDetails from "../../queries/FetchDeviceDetails";
 import { useUiStore } from "../../store/uiStore";
+import { deviceIcons } from "../common/DeviceIcons";
 import DraggableWindow from "../common/DraggableWindow";
 import Loading from "../common/Loading";
+import DeviceInfo from "./DeviceInfo";
 
 interface DraggableDeviceWindowProps {
   selectedDevice: string;
@@ -37,10 +40,31 @@ const DraggableDeviceWindow: React.FC<DraggableDeviceWindowProps> = ({
   }, [queryClient, data]);
 
   return (
-    <div className="drag-device-area">
-      <DraggableWindow id="device-window">
-        <button onClick={closeWindow}>Close</button>
-        {isLoading ? <Loading /> : <>{data?.type}</>}
+    <div className="drag-dev-area">
+      {data && deviceIcons[data.type]}
+      <DraggableWindow id="dev-window">
+        <div className="dev-window">
+          {isLoading ? (
+            <Loading />
+          ) : (
+            data && (
+              <>
+                <div className="dev-info">
+                  <div className="dev-window--header">
+                    <h2>{data?.name}</h2>
+                    <button
+                      onClick={closeWindow}
+                      className="button button__icon"
+                    >
+                      <BsX />
+                    </button>
+                  </div>
+                  <DeviceInfo deviceDetails={data} />
+                </div>
+              </>
+            )
+          )}
+        </div>
       </DraggableWindow>
     </div>
   );

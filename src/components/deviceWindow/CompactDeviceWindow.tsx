@@ -56,18 +56,8 @@ const CompactDeviceWindow: React.FC<CompactDeviceWindowProps> = ({
         data && (
           <>
             {deviceIcons[data.type]}
-            <div className="device-info">
+            <div className="dev-info">
               <h2>{data.name}</h2>
-              <div className="device-info--item">
-                <p className="device-info--item--title">Connection state</p>
-                <p className="device-info--item--value">
-                  {data.connectionState}
-                </p>
-              </div>
-              <div className="device-info--item">
-                <p className="device-info--item--title">Device type</p>
-                <p className="device-info--item--value">{data.type}</p>
-              </div>
               <DeviceInfo deviceDetails={data} />
             </div>
           </>
