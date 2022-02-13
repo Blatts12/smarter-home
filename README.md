@@ -7,15 +7,17 @@ npm install
 ```
 
 ### Mock Rest API
-Powered by JSON Server \
-Port 3030, if different then change it in .env file.
+Powered by JSON Server. \
+Port 3030.
 ```
 npm run db
 ```
 
 
 
-### Start app with Vite
+### Start app
+Powered by Vite
+Port 3000.
 ```
 npm run dev
 ```
