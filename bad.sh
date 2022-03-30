@@ -1,4 +1,4 @@
-git filter-branch --env-filter '
+git filter-branch -f --env-filter '
 WRONG_EMAIL="9402720+Blatts12@users.noreply.github.com"
 NEW_NAME="--global"
 NEW_EMAIL="--global"
